@@ -1,0 +1,42 @@
+.card{
+    width: 550px;
+    padding: 30px 60px;
+    margin: 0 auto 20px auto;
+}
+.card-top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card-img-top{
+    height: auto;
+    width: 300px;
+}
+h6{
+    font-size: .8rem;
+}
+.price-container{
+    display: flex;
+    gap: 50px;
+}
+.org-price{
+    text-decoration: line-through;
+}
+@media screen and (max-width: 560px) {
+    .card{
+        width: 95%;
+        padding: 10px 20px;
+    }
+    .card-img-top{
+        height: 50%;
+    }
+
+  }
+  .off-text{
+    color: black;
+    opacity: 0.4;
+  }
+  .card-body{
+    display: flex;
+    justify-content: space-between;
+  }

@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="categories">
+        <div class="dropdowns">
+            <select [(ngModel)]="selectedCategory" (ngModelChange)="filterProducts()">
+                <option value="">All Categories</option>
+                <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+            </select>
+
+            <select [(ngModel)]="selectedSortOption" (ngModelChange)="sortProducts()">
+                <option value="" disabled [ngStyle]="{ 'display': selectedSortOption ? 'none' : 'block' }">Sort By
+                </option>
+                <option value="name">Name</option>
+                <option value="priceUp">Price (Low to High)</option>
+                <option value="priceDown">Price (High to Low)</option>
+            </select>
+        </div>
+        <div>
+            <input class="search-input" type="text" [(ngModel)]="searchKeyword"
+                placeholder="Search by Name or Description">
+            <button class="btn btn-success" (click)="filterProducts()">Search</button>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th *ngIf="role==='Admin'">Action</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            <tr *ngFor="let product of filteredProducts">
+                    <td (click)="openProductDetail(product.id)">{{product.name}}</td>
+                    <td (click)="openProductDetail(product.id)">{{product.description}}</td>
+                    <td (click)="openProductDetail(product.id)">{{product.price-product.discount}}</td>
+                    <td (click)="openProductDetail(product.id)">
+                        <img class="product-image" [src]="'data:image/jpeg;base64,' + product.image" alt="Image">
+                    </td>
+                    <td *ngIf="role==='Admin'">
+                        <div class="btn-container">
+                            <button class="btn btn-primary" (click)="edit(product.id)">Edit</button>
+                            <button class="btn btn-danger" (click)="delete(product.id)">Delete</button>
+                        </div>
+                    </td>
+            </tr>
+            <tr></tr>
+        </tbody>
+    </table>
+    <div class="pagination">
+        <button class="btn btn-dark" (click)="goToPreviousPage()" [disabled]="currentPage === 1">Previous</button>
+        <span class="page-no">{{currentPage}}</span>
+        <button class="btn btn-dark" (click)="goToNextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+</div>

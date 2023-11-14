@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card-header">
+        <h3 class="mb-5">Orders</h3>
+    </div>
+    <div class="card" *ngFor="let cartProduct of products">
+        <div class="card-top">
+            <img class="card-img-top rounded" [src]="'data:image/jpeg;base64,' + cartProduct.product.image"
+                alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <div>
+                <h6 class="card-title text-secondary">{{cartProduct.product.name}}</h6>
+                <div class="price-container">
+                    <div>
+                        <h3>&#8377; {{cartProduct.product.price}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h6 class="text-muted">{{cartProduct.orderedOn}}</h6>
+            </div>
+        </div>
+    </div>
+</div>

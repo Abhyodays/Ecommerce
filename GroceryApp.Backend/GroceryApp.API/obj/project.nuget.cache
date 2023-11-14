@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "xZ2bcY6RVpGRyiWtWyYULC3Cwga61cDXc2RuvmXMuFv/P0wVBGzZZtAaw/xX4MCPywqzscIF1OeJIDaYYTpifA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abhyodaysingh\\source\\repos\\GroceryApp\\GroceryApp.API\\GroceryApp.Presentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abhyodaysingh\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\abhyodaysingh\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\abhyodaysingh\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\abhyodaysingh\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\abhyodaysingh\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\abhyodaysingh\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

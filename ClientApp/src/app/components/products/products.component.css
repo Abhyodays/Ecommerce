@@ -1,0 +1,45 @@
+.table>tbody{
+    height: 250px;
+    vertical-align: middle;
+}
+.product-image{
+    height: 100px;
+    width: auto;
+}
+.btn{
+    margin: 10px;
+}
+td{
+    cursor: pointer;
+    height: 100px;
+}
+.categories{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.categories select{
+    padding: 5px 10px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+.search-input{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 5px;
+    padding: 0 5px;
+    height: 30px;
+    width: 300px;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.page-no{
+    font-weight: bold;
+}

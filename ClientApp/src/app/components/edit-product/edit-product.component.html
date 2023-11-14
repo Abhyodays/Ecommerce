@@ -1,0 +1,45 @@
+<div class="container">
+    <form [formGroup]="productForm" (ngSubmit)="editProduct()" class="row g-3">
+        <input type="hidden" id="id" class="form-control" formControlName="id" [value]="product?.id">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="col-md-6">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" id="description" class="form-control" formControlName="description">
+      </div>
+      <div class="col-md-6">
+        <label for="category" class="form-label">Category</label>
+        <input type="text" id="category" class="form-control" formControlName="category">
+      </div>
+      <div class="col-md-6">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="text" id="quantity" class="form-control" formControlName="quantity">
+      </div>
+      <div class="col-md-6">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" id="price" class="form-control" formControlName="price">
+      </div>
+      <div class="col-md-6">
+        <label for="discount" class="form-label">Discount</label>
+        <input type="text" id="discount" class="form-control" formControlName="discount">
+      </div>
+      <div class="col-md-6">
+        <label for="specification" class="form-label">Specification</label>
+        <input type="text" id="specification" class="form-control" formControlName="specifications">
+      </div>
+      <div class="col-md-6">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" id="image" class="form-control" (change)="onImageSelected($event)" formControlName="image">
+        <p class="text-danger">{{imageError}}</p>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+    <div class="error-container" *ngFor="let error of errors">
+        <p class="text-danger">{{error}}</p>
+    </div>
+  </div>
+  

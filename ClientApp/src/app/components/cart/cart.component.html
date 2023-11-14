@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card-header">
+    <h3 class="mb-5">Cart</h3>
+    <button [disabled]="products.length===0" class="btn btn-success" (click)="order()">Order</button>
+    </div>
+    <div class="card" *ngFor="let cartProduct of products">
+        <div class="card-top">
+            <img class="card-img-top rounded" [src]="'data:image/jpeg;base64,' + cartProduct.product.image" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <h6 class="card-title text-secondary">{{cartProduct.product.name}}</h6>
+            <div class="price-container">
+                <div>
+                    <h3>&#8377; {{cartProduct.product.price}}</h3>
+                    <p class="text-muted off-text">FLAT {{getDiscoutPercentage(cartProduct.product)}}% OFF</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-outline-danger" (click)="removeItem(cartProduct.product.id!)">Remove</button>
+        </div>
+    </div>
+</div>

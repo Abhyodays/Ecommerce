@@ -1,0 +1,26 @@
+nav{
+    margin-bottom: 50px;
+}
+.navbar-brand{
+    cursor: pointer;
+}
+.in-login{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.user-name{
+    margin: auto 20px;
+}
+.logout{
+    position: absolute;
+    right: 20px;
+}
+@media screen and (max-width: 990px) {
+    .user-name{
+        margin-left:0px;
+    }
+    .logout{
+        right: auto;
+    }
+  }

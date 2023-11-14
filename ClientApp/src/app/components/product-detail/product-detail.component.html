@@ -1,0 +1,26 @@
+<div class=".container">
+    <div class="card">
+        <div class="card-top">
+            <img class="card-img-top" [src]="'data:image/jpeg;base64,' + product.image" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <div class="product-details">
+                <h6 class="card-title text-secondary">{{product.name}}</h6>
+                <div class="price-container">
+                    <div>
+                        <h3>&#8377; {{price}}</h3>
+                        <h6 *ngIf="Off" class="off-text">FLAT {{Off}}% OFF</h6>
+                    </div>
+                    <div *ngIf="price != product.price">
+                        <h4 class="text-danger org-price">&#8377; {{product.price}}</h4>
+                    </div>
+                </div>
+                <p class="card-text fw-bold">{{product.description}}</p>
+                <p class="card-text my-0">{{product.specifications}}</p>
+            </div>
+            <div>
+                <button class="btn btn-success" (click)="AddToCart(product.id!)" [disabled]="!isLoggedIn()||role==='Admin'">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
