@@ -17,7 +17,7 @@
 ## Frontend
 Execute following commands:
 1. npm install
-2. ng serve \
+2. ng serve 
 
 now client app is running
 
