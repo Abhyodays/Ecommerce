@@ -32,7 +32,7 @@ namespace GroceryApp.DAL.Repositories
                     Console.WriteLine("Cart is Empty");
                 }
 
-                return cart.CartItems
+                return cart.CartItem
             }
 
             return new List<CartItem>()
