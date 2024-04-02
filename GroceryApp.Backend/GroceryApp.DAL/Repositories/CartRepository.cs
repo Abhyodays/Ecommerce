@@ -35,7 +35,7 @@ namespace GroceryApp.DAL.Repositories
                 return cart.CartItems;
             }
 
-            // return new List<CartItem>();
+            return new List<CartItem>()
         }
 
 
