@@ -35,7 +35,7 @@ namespace GroceryApp.DAL.Repositories
                 return cart.CartItems;
             }
 
-            return new List<CartItem>();
+            // return new List<CartItem>();
         }
 
 
@@ -62,7 +62,7 @@ namespace GroceryApp.DAL.Repositories
                 _context.Carts.Add(newCart);
                 _context.SaveChanges();
 
-                cart = newCart; 
+                cart = newCart;
 
             }
 
@@ -94,7 +94,7 @@ namespace GroceryApp.DAL.Repositories
                .Include(c => c.CartItems)
                .ThenInclude(ci => ci.product)
                .FirstOrDefault(c => c.userName == userMail);
-            if (cart!= null)
+            if (cart != null)
             {
                 var cartItem = cart.CartItems.FirstOrDefault(ci => ci.product.Id == productId);
                 if (cartItem != null)
@@ -113,7 +113,7 @@ namespace GroceryApp.DAL.Repositories
                .Include(c => c.CartItems)
                .ThenInclude(ci => ci.product)
                .FirstOrDefault(c => c.userName == userMail);
-            if(cart != null)
+            if (cart != null)
             {
                 cart.CartItems.Clear();
                 _context.SaveChanges();
